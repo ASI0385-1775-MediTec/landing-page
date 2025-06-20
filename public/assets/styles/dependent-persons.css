@@ -1,0 +1,475 @@
+/* DEPENDENT PERSONS HERO SECTION */
+        .dependent-hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+
+        .dh-col1 {
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .dh-col1 h1 {
+            font-family: 'Zilla Slab', serif;
+            font-size: 36px;
+            font-weight: 600;
+            line-height: 1.2;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .dh-col1 h1 span {
+            color: #3D44DD;
+        }
+
+        .hero-description {
+            color: #405057;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .hero-primary-btn {
+            background-color: #3D44DD;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .hero-primary-btn:hover {
+            background-color: #2A33B8;
+        }
+
+        .hero-secondary-btn {
+            color: #3D44DD;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: opacity 0.3s ease;
+        }
+
+        .hero-secondary-btn:hover {
+            opacity: 0.8;
+        }
+
+        .dh-col2 {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .dependent-hero-image {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        /* WHY USE CAREME SECTION */
+        .why-use-section {
+            background-color: #f8f9fa;
+            padding: 80px 20px;
+            margin-bottom: 100px;
+        }
+
+        .why-use-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .why-use-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .why-use-title {
+            font-family: 'Zilla Slab', serif;
+            font-size: 36px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .why-use-title span {
+            color: #3D44DD;
+        }
+
+        .why-use-description {
+            color: #405057;
+            font-size: 16px;
+            line-height: 1.6;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .why-use-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .why-use-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .why-use-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .why-use-icon {
+            width: 70px;
+            height: 70px;
+            margin-bottom: 20px;
+        }
+
+        .why-use-card h3 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #3D44DD;
+            margin-bottom: 15px;
+        }
+
+        .why-use-card p {
+            color: #405057;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* HOW IT WORKS SECTION */
+        .how-it-works {
+            margin-bottom: 100px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .how-it-works-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .how-it-works-title {
+            font-family: 'Zilla Slab', serif;
+            font-size: 36px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .how-it-works-title span {
+            color: #3D44DD;
+        }
+
+        .steps-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .step-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background-color: #3D44DD;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .step-content h3 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .step-content p {
+            color: #405057;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* CHOOSE CAREGIVER SECTION */
+        .choose-caregiver-section {
+            background: linear-gradient(135deg, #3D44DD 0%, #5B63E8 100%);
+            padding: 80px 20px;
+            margin-bottom: 100px;
+            border-radius: 20px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .choose-caregiver-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .choose-caregiver-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .choose-caregiver-title {
+            font-family: 'Zilla Slab', serif;
+            font-size: 36px;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .choose-caregiver-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .caregiver-tips {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .tip-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .tip-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-3px);
+        }
+
+        .tip-card h4 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tip-card p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* FEATURES SECTION */
+        .features-section {
+            margin-bottom: 100px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .features-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .features-title {
+            font-family: 'Zilla Slab', serif;
+            font-size: 36px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .features-title span {
+            color: #3D44DD;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .feature-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 15px;
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+        }
+
+        .feature-card h3 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #3D44DD;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            color: #405057;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* CTA SECTION */
+        .dependent-cta-section {
+            background-color: #f8f9fa;
+            padding: 80px 20px;
+            text-align: center;
+            border-radius: 20px;
+            margin-bottom: 100px;
+        }
+
+        .dependent-cta-content h2 {
+            font-family: 'Zilla Slab', serif;
+            font-size: 36px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .dependent-cta-content h2 span {
+            color: #3D44DD;
+        }
+
+        .dependent-cta-content p {
+            color: #405057;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .dependent-cta-btn {
+            background-color: #3D44DD;
+            color: white;
+            border: none;
+            padding: 15px 35px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dependent-cta-btn:hover {
+            background-color: #2A33B8;
+        }
+
+        /* RESPONSIVE */
+        @media (min-width: 768px) {
+            .dependent-hero {
+                flex-direction: row;
+                text-align: left;
+                gap: 60px;
+            }
+
+            .dh-col1 {
+                text-align: left;
+            }
+
+            .hero-buttons {
+                flex-direction: row;
+                justify-content: flex-start;
+            }
+
+            .why-use-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+
+            .steps-container {
+                position: relative;
+            }
+
+            .step-item {
+                flex-direction: row;
+                text-align: left;
+            }
+
+            .step-content {
+                flex: 1;
+            }
+
+            .caregiver-tips {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+
+            .feature-card {
+                flex-direction: row;
+                text-align: left;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .dh-col1 h1 {
+                font-size: 48px;
+            }
+
+            .why-use-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .choose-caregiver-section {
+                padding: 100px 50px;
+            }
+}
