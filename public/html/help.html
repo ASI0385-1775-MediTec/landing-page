@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es-pe">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareMe | Help</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Zilla+Slab:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../assets/styles/styles.css">
+    <link rel="stylesheet" href="../assets/styles/help.css">
+</head>
+<body>
+    <header>
+        <a href="../../index.html">
+            <p class="logo-text">CareMe</p>
+        </a>
+        <button class="open-menu" id="open"><i class="bi bi-list"></i></button>
+        <nav class="main-menu" id="nav">
+            <button class="close-menu" id="close"><i class="bi bi-list"></i></button>
+            <ul class="menu-list">
+                <li><a href="caregivers.html">Cuidadores</a></li>
+                <li><a href="dependent-persons.html">Personas Dependientes</a></li>
+                <li><a href="../../index.html#contact-careme">Contáctanos</a></li>
+                <li><a href="../../index.html#nosotros">Nosotros</a></li> 
+                <li><a href="help.html" class="active">Ayuda</a></li>
+                <li><a href="login.html" class="login-btn" id="login">Inicia sesión</a></li>
+                <li><a href="login.html?form=register" class="register-btn" id="register">Regístrate</a></li>
+                <button class="accesibility-button">ES</button>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="help-hero">
+            <h1>¿Cómo podemos ayudarte?</h1>
+            <p class="help-hero-description">
+                Encuentra respuestas rápidas a tus preguntas o contacta con nuestro 
+                equipo de soporte disponible 24/7
+            </p>
+            <div class="search-container">
+                <input type="text" class="search-box" placeholder="Busca en nuestro centro de ayuda...">
+                <button class="search-button">
+                    <i class="bi bi-search"></i>
+                </button>
+            </div>
+        </section>
+
+        <section class="quick-links-section">
+            <div class="quick-links-header">
+                <h2 class="quick-links-title">Temas <span>más consultados</span></h2>
+            </div>
+
+            <div class="quick-links-grid">
+                <div class="quick-link-card">
+                    <i class="bi bi-person-check quick-link-icon"></i>
+                    <h3>Cómo registrarme</h3>
+                    <p>Aprende paso a paso cómo crear tu cuenta en CareMe</p>
+                </div>
+
+                <div class="quick-link-card">
+                    <i class="bi bi-search quick-link-icon"></i>
+                    <h3>Buscar un cuidador</h3>
+                    <p>Descubre cómo encontrar al cuidador perfecto para tu familiar</p>
+                </div>
+
+                <div class="quick-link-card">
+                    <i class="bi bi-credit-card quick-link-icon"></i>
+                    <h3>Métodos de pago</h3>
+                    <p>Conoce todas las formas de pago disponibles en la plataforma</p>
+                </div>
+
+                <div class="quick-link-card">
+                    <i class="bi bi-shield-check quick-link-icon"></i>
+                    <h3>Seguridad y verificación</h3>
+                    <p>Entiende cómo verificamos a nuestros cuidadores</p>
+                </div>
+
+                <div class="quick-link-card">
+                    <i class="bi bi-calendar-check quick-link-icon"></i>
+                    <h3>Programar servicios</h3>
+                    <p>Aprende a agendar servicios únicos o recurrentes</p>
+                </div>
+
+                <div class="quick-link-card">
+                    <i class="bi bi-exclamation-triangle quick-link-icon"></i>
+                    <h3>Emergencias</h3>
+                    <p>Qué hacer en caso de una emergencia durante el servicio</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="faq-container">
+                <div class="faq-header">
+                    <h2 class="faq-title">Preguntas <span>Frecuentes</span></h2>
+                </div>
+
+                <div class="faq-categories">
+                    <button class="category-btn active">General</button>
+                    <button class="category-btn">Para Familias</button>
+                    <button class="category-btn">Para Cuidadores</button>
+                    <button class="category-btn">Pagos</button>
+                    <button class="category-btn">Seguridad</button>
+                </div>
+
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            ¿Qué es CareMe y cómo funciona?
+                            <i class="bi bi-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>CareMe es la plataforma líder en Perú que conecta a familias con cuidadores profesionales verificados. 
+                            Funciona de manera simple: te registras, buscas cuidadores en tu zona según tus necesidades específicas, 
+                            seleccionas al que mejor se adapte a tu familiar, programas el servicio y pagas de forma segura por la app. 
+                            Durante todo el proceso, puedes monitorear el servicio en tiempo real y comunicarte directamente con el cuidador.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            ¿Cómo verifican a los cuidadores?
+                            <i class="bi bi-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Todos nuestros cuidadores pasan por un riguroso proceso de verificación que incluye: validación de 
+                            identidad con DNI, verificación de antecedentes penales y policiales, confirmación de títulos y 
+                            certificaciones profesionales, entrevista personal con nuestro equipo, verificación de referencias 
+                            laborales anteriores y evaluación de competencias técnicas. Solo el 15% de los postulantes logran 
+                            convertirse en cuidadores CareMe.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            ¿Cuánto cuesta el servicio?
+                            <i class="bi bi-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Los precios varían según la experiencia del cuidador, el tipo de servicio y la duración. 
+                            En promedio, el costo por hora oscila entre S/. 25 y S/. 45. Siempre verás el precio exacto 
+                            antes de confirmar el servicio, sin costos ocultos. CareMe cobra una pequeña comisión por 
+                            transacción que ya está incluida en el precio mostrado.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            ¿Puedo cancelar un servicio programado?
+                            <i class="bi bi-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sí, puedes cancelar un servicio con al menos 4 horas de anticipación sin ningún costo. 
+                            Para cancelaciones con menos de 4 horas de anticipación, se aplicará una penalidad del 50% 
+                            del valor del servicio. En casos de emergencia documentada, evaluamos cada situación de 
+                            manera individual.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            ¿Qué pasa si no estoy satisfecho con el servicio?
+                            <i class="bi bi-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Tu satisfacción es nuestra prioridad. Si no estás conforme con el servicio, puedes 
+                            reportarlo dentro de las 24 horas posteriores y nuestro equipo investigará el caso. 
+                            Dependiendo de la situación, podemos ofrecer un reembolso parcial o total, o un crédito 
+                            para futuros servicios. Además, tu feedback nos ayuda a mantener la calidad de nuestra 
+                            comunidad de cuidadores.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            ¿Los cuidadores pueden administrar medicamentos?
+                            <i class="bi bi-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Los cuidadores CareMe que son enfermeros o técnicos en enfermería titulados están 
+                            capacitados para administrar medicamentos según prescripción médica. Debes proporcionar 
+                            las indicaciones médicas claras y los medicamentos necesarios. Los cuidadores no pueden 
+                            modificar dosis ni horarios sin autorización médica previa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="help-contact-section">
+            <div class="help-contact-header">
+                <h2 class="help-contact-title">¿No encontraste lo que buscabas? <span>Contáctanos</span></h2>
+                <p class="help-contact-subtitle">
+                    Nuestro equipo de atención está disponible 24/7 para ayudarte con cualquier consulta o situación
+                </p>
+            </div>
+
+            <div class="contact-options">
+                <div class="contact-card">
+                    <img src="../assets/icons/chat-en-vivo.png" alt="Chat en vivo" class="contact-icon">
+                    <h3>Chat en vivo</h3>
+                    <p>Habla con un agente en tiempo real. Tiempo de respuesta promedio: 2 minutos</p>
+                    <a href="#" class="contact-link">Iniciar chat →</a>
+                </div>
+
+                <div class="contact-card">
+                    <img src="../assets/icons/llamanos.png" alt="Línea telefónica" class="contact-icon">
+                    <h3>Llámanos</h3>
+                    <p>Atención telefónica las 24 horas para consultas y emergencias</p>
+                    <a href="tel:+5101234567" class="contact-link">(01) 234-5678</a>
+                </div>
+
+                <div class="contact-card">
+                    <img src="../assets/icons/escribenos.png" alt="Correo electrónico" class="contact-icon">
+                    <h3>Escríbenos</h3>
+                    <p>Envíanos un correo y te responderemos en menos de 24 horas</p>
+                    <a href="mailto:ayuda@careme.pe" class="contact-link">ayuda@careme.pe</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="terms-section">
+            <div class="terms-container">
+                <div class="terms-header">
+                    <h2 class="terms-title">Términos y Condiciones</h2>
+                </div>
+
+                <div class="terms-grid">
+                    <div class="term-card">
+                        <h3>Uso de la Plataforma</h3>
+                        <p>Al utilizar CareMe, aceptas cumplir con nuestros términos de servicio:</p>
+                        <ul class="term-list">
+                            <li>Debes ser mayor de 18 años para registrarte</li>
+                            <li>La información proporcionada debe ser veraz y actualizada</li>
+                            <li>Eres responsable de mantener la confidencialidad de tu cuenta</li>
+                            <li>No puedes usar la plataforma para fines ilegales o no autorizados</li>
+                            <li>Debes tratar con respeto a todos los usuarios de la plataforma</li>
+                        </ul>
+                    </div>
+
+                    <div class="term-card">
+                        <h3>Política de Privacidad</h3>
+                        <p>Protegemos tu información personal con los más altos estándares:</p>
+                        <ul class="term-list">
+                            <li>Solo recopilamos información necesaria para el servicio</li>
+                            <li>No compartimos datos personales con terceros sin consentimiento</li>
+                            <li>Utilizamos encriptación para proteger información sensible</li>
+                            <li>Puedes solicitar la eliminación de tus datos en cualquier momento</li>
+                            <li>Cumplimos con la Ley de Protección de Datos Personales del Perú</li>
+                        </ul>
+                    </div>
+
+                    <div class="term-card">
+                        <h3>Responsabilidades del Usuario</h3>
+                        <p>Como usuario de CareMe, te comprometes a:</p>
+                        <ul class="term-list">
+                            <li>Proporcionar un ambiente seguro y respetuoso durante los servicios</li>
+                            <li>Comunicar claramente las necesidades de cuidado requeridas</li>
+                            <li>Realizar los pagos de manera puntual según lo acordado</li>
+                            <li>Notificar cualquier cambio en el servicio con anticipación</li>
+                            <li>Evaluar honestamente el servicio recibido</li>
+                        </ul>
+                    </div>
+
+                    <div class="term-card">
+                        <h3>Política de Reembolsos</h3>
+                        <p>Queremos que estés completamente satisfecho con nuestro servicio:</p>
+                        <ul class="term-list">
+                            <li>Cancelaciones con 4+ horas de anticipación: reembolso completo</li>
+                            <li>Cancelaciones con menos de 4 horas: 50% de penalidad</li>
+                            <li>Servicio no completado por el cuidador: reembolso total</li>
+                            <li>Insatisfacción justificada: evaluación caso por caso</li>
+                            <li>Los reembolsos se procesan en 5-7 días hábiles</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-support-text">
+                    <p>Contamos con el respaldo de entidades gubernamentales y organizaciones que apoyan nuestra visión de transformar el cuidado domiciliario en la región, conectando a cuidadores profesionales con familias que buscan atención de calidad y confianza.</p>
+                </div>
+                <div class="footer-partners">
+                    <img src="../assets/icons/gob.svg" alt="Gobierno del Perú" class="partner-logo" id="gobierno-peru">
+                    <img src="../assets/icons/fundacion-wiese.svg" alt="Fundación Wiese" class="partner-logo" id="fundacion-wiese">
+                    <img src="../assets/icons/cruz-roja.svg" alt="Cruz Roja Peruana" class="partner-logo">
+                    <img src="../assets/icons/bcp.svg" alt="BCP" class="partner-logo">
+                </div>
+            </div>
+
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <a href="../../index.html"><img src="../assets/icons/careme.svg" alt="CareMe Logo" class="footer-logo-icon"></a>
+                    </div>
+                    <div class="footer-app-links">
+                        <a href="https://play.google.com/store/apps" target="_blank"><img src="../assets/images/get-googleplay.png" alt="Google Play" class="app-download"></a>
+                        <a href="https://www.apple.com/app-store/" target="_blank"><img src="../assets/images/get-appstore.png" alt="App Store" class="app-download"></a>
+                    </div>
+                    <div class="footer-country">
+                        <span>Perú</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Cuidadores</h4>
+                        <ul>
+                            <li><a href="caregivers.html">Sé parte del cambio</a></li>
+                            <li><a href="caregivers.html">Requisitos para cuidadores</a></li>
+                            <li><a href="caregivers.html">Beneficios</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Personas dependientes</h4>
+                        <ul>
+                            <li><a href="dependent-persons.html">Únete a la familia CareMe</a></li>
+                            <li><a href="../../index.html#testimonios">Testimonios</a></li>
+                            <li><a href="dependent-persons.html">Cómo elegir al cuidador adecuado</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Contáctanos</h4>
+                        <ul>
+                            <li><a href="../../index.html#contact-careme">Formulario de contacto</a></li>
+                            <li><a href="#contact">Atención al Cliente</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Nosotros</h4>
+                        <ul>
+                            <li><a href="../../index.html#nosotros">Sobre Nosotros</a></li>
+                            <li><a href="../../index.html#nosotros">Conoce nuestra marca</a></li>
+                            <li><a href="login.html">Únete al equipo</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Ayuda</h4>
+                        <ul>
+                            <li><a href="#faq">FAQ</a></li>
+                            <li><a href="#terms">Términos y condiciones</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/" class="social-link" target="_blank" noreferrer>
+                        <img src="../assets/icons/facebook-icon.svg" alt="Facebook" class="social-icon">
+                    </a>
+                    <a href="https://x.com/home?lang=es" class="social-link" target="_blank" noreferrer>
+                        <img src="../assets/icons/twitter.svg" alt="Twitter" class="social-icon">
+                    </a>
+                    <a href="https://www.instagram.com/" class="social-link" target="_blank" noreferrer>
+                        <img src="../assets/icons/instagram.svg" alt="Instagram" class="social-icon">
+                    </a>
+                    <a href="https://www.tiktok.com/es/" class="social-link" target="_blank" noreferrer>
+                        <img src="../assets/icons/tiktok.svg" alt="TikTok" class="social-icon">
+                    </a>
+                    <a href="https://www.linkedin.com/" class="social-link" target="_blank" noreferrer>
+                        <img src="../assets/icons/linkedin.svg" alt="LinkedIn" class="social-icon">
+                    </a>
+                </div>
+                <div class="footer-copyright">
+                    <p>© 2025 CareMe Perú, S.L.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../assets/scripts/help.js"></script>
+    <script src="../assets/scripts/script.js"></script>
+</body>
+</html>
