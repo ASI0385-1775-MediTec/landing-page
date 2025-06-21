@@ -1,0 +1,375 @@
+/* CAREGIVERS HERO SECTION */
+        .caregivers-hero {
+            padding: 60px 20px;
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .caregivers-hero h1 {
+            font-family: 'Zilla Slab', serif;
+            font-size: 42px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .caregivers-hero h1 span {
+            color: #3D44DD;
+        }
+
+        .caregivers-hero-description {
+            color: #405057;
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-cta {
+            background-color: #3D44DD;
+            color: white;
+            border: none;
+            padding: 15px 35px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .hero-cta:hover {
+            background-color: #2A33B8;
+        }
+
+        /* REQUIREMENTS SECTION */
+        .requirements-section {
+            margin-bottom: 100px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .requirements-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .requirements-title {
+            font-family: 'Zilla Slab', serif;
+            font-size: 36px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .requirements-title span {
+            color: #3D44DD;
+        }
+
+        .requirements-subtitle {
+            color: #405057;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .requirements-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .requirement-card {
+            background: white;
+            border: 2px solid #f1f1f1;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .requirement-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-color: #3D44DD;
+        }
+
+        .requirement-icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 20px;
+        }
+
+        .requirement-card h3 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #3D44DD;
+            margin-bottom: 15px;
+        }
+
+        .requirement-card p {
+            color: #405057;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* WHY JOIN SECTION */
+        .why-join-section {
+            background-color: #f8f9fa;
+            padding: 80px 20px;
+            margin-bottom: 100px;
+        }
+
+        .why-join-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .why-join-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .why-join-title {
+            font-family: 'Zilla Slab', serif;
+            font-size: 36px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .why-join-title span {
+            color: #3D44DD;
+        }
+
+        .why-join-description {
+            color: #405057;
+            font-size: 16px;
+            line-height: 1.6;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .why-join-features {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        .why-join-feature {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+        }
+
+        .feature-image {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            border-radius: 15px;
+        }
+
+        .feature-content h3 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: #3D44DD;
+            margin-bottom: 15px;
+        }
+
+        .feature-content p {
+            color: #405057;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* BENEFITS SECTION */
+        .benefits-section {
+            margin-bottom: 100px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .benefits-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .benefits-title {
+            font-family: 'Zilla Slab', serif;
+            font-size: 36px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .benefits-title span {
+            color: #3D44DD;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+
+        .benefit-item {
+            background: white;
+            border-left: 4px solid #3D44DD;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .benefit-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .benefit-item h4 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .benefit-item p {
+            color: #405057;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* CTA SECTION */
+        .cta-section {
+            background: linear-gradient(135deg, #3D44DD 0%, #5B63E8 100%);
+            padding: 80px 20px;
+            text-align: center;
+            border-radius: 20px;
+            margin-bottom: 100px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-content h2 {
+            font-family: 'Zilla Slab', serif;
+            font-size: 36px;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .cta-content p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .cta-primary {
+            background-color: white;
+            color: #3D44DD;
+            border: none;
+            padding: 15px 35px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .cta-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-secondary {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            transition: opacity 0.3s ease;
+        }
+
+        .cta-secondary:hover {
+            opacity: 0.8;
+        }
+
+        /* RESPONSIVE */
+        @media (min-width: 768px) {
+            .caregivers-hero {
+                padding: 100px 30px;
+            }
+
+            .caregivers-hero h1 {
+                font-size: 48px;
+            }
+
+            .requirements-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+
+            .why-join-features {
+                gap: 60px;
+            }
+
+            .why-join-feature {
+                flex-direction: row;
+                text-align: left;
+            }
+
+            .why-join-feature:nth-child(even) {
+                flex-direction: row-reverse;
+            }
+
+            .feature-content {
+                flex: 1;
+            }
+
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+
+            .cta-buttons {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .caregivers-hero h1 {
+                font-size: 56px;
+            }
+
+            .requirements-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .why-join-section {
+                padding: 100px 50px;
+            }
+
+            .benefits-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 40px;
+            }
+        }
