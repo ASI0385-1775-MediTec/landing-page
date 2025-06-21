@@ -30,7 +30,7 @@ El objetivo principal de CareMe es ofrecer una plataforma de fácil acceso para 
 | Rodríguez Mena José Miguel               | U202324568        |
 | Valenzuela De la Cruz Thamara Zulay       | U201918360        |
 | Lara Talla Carlos Fabrizio                | U202114534        |
-| Videla Ventura Jorge Joseoh                | U202220648        |
+| Videla Ventura Jorge Joseph                | U202220648        |
 
 ## Tecnologías Utilizadas 💻
 
