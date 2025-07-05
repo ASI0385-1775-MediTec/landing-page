@@ -1,0 +1,609 @@
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        body.no-scroll {
+            overflow: hidden;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: white;
+            padding: 15px 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-text {
+            color: #3D44DD;
+            font-family: 'Zilla Slab', serif;
+            font-size: 25px;
+            font-weight: 600;
+        }
+
+        .open-menu, .close-menu {
+            display: none;
+        }
+
+        nav ul {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: #333;
+            font-weight: 600;
+            font-size: 14px;
+            transition: color 0.3s ease;
+            white-space: nowrap;
+            padding: 8px 15px;
+            border-radius: 8px;
+        }
+
+        nav ul li a:hover {
+            color: #3D44DD;
+            background-color: #f8f9fa;
+        }
+
+        nav ul li a.active {
+            color: #3D44DD;
+            background-color: #f0f1ff;
+        }
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .user-avatar {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: #3D44DD;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        main {
+            padding: 30px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* SEARCH HEADER */
+        .search-header {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .search-title {
+            font-family: 'Zilla Slab', serif;
+            font-size: 32px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .search-title span {
+            color: #3D44DD;
+        }
+
+        .search-subtitle {
+            color: #405057;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* FILTERS */
+        .filters-section {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .filters-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .filter-label {
+            font-weight: 600;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .filter-select {
+            padding: 12px 15px;
+            border: 2px solid #f1f1f1;
+            border-radius: 8px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            color: #333;
+            background-color: #f8f9fa;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-select:focus {
+            outline: none;
+            border-color: #3D44DD;
+            background-color: white;
+        }
+
+        /* CAREGIVERS GRID */
+        .caregivers-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .caregiver-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .caregiver-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-color: #3D44DD;
+        }
+
+        .caregiver-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .caregiver-photo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #f0f1ff;
+        }
+
+        .caregiver-info h3 {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+
+        .caregiver-specialty {
+            color: #3D44DD;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .caregiver-details {
+            margin-bottom: 15px;
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+            color: #405057;
+            font-size: 14px;
+        }
+
+        .detail-icon {
+            color: #3D44DD;
+            font-size: 16px;
+            width: 16px;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .stars {
+            color: #FFD700;
+            font-size: 14px;
+        }
+
+        .rating-number {
+            color: #333;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .contract-btn {
+            background-color: #3D44DD;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        .contract-btn:hover {
+            background-color: #2A33B8;
+        }
+
+        /* MODAL */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-overlay.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.9);
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            transition: all 0.3s ease;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-overlay.visible .modal-content {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #666;
+            cursor: pointer;
+            padding: 5px;
+            transition: color 0.3s ease;
+        }
+
+        .modal-close:hover {
+            color: #333;
+        }
+
+        .modal-caregiver-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .modal-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #f0f1ff;
+        }
+
+        .modal-caregiver-info h2 {
+            font-family: 'Zilla Slab', serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .modal-specialty {
+            color: #3D44DD;
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .modal-rating {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .modal-stars {
+            color: #FFD700;
+            font-size: 16px;
+        }
+
+        .modal-rating-text {
+            color: #333;
+            font-weight: 600;
+        }
+
+        /* MODAL SECTIONS */
+        .modal-section {
+            margin-bottom: 25px;
+        }
+
+        .modal-section-title {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .modal-section-icon {
+            color: #3D44DD;
+            font-size: 18px;
+        }
+
+        .experience-item, .education-item, .service-item {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-left: 4px solid #3D44DD;
+        }
+
+        .experience-title, .education-title, .service-title {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .experience-details, .education-details, .service-details {
+            color: #405057;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .modal-btn {
+            flex: 1;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .modal-btn-primary {
+            background-color: #3D44DD;
+            color: white;
+            border: none;
+        }
+
+        .modal-btn-primary:hover {
+            background-color: #2A33B8;
+        }
+
+        .modal-btn-secondary {
+            background-color: transparent;
+            color: #3D44DD;
+            border: 2px solid #3D44DD;
+        }
+
+        .modal-btn-secondary:hover {
+            background-color: #3D44DD;
+            color: white;
+        }
+
+        /* RESPONSIVE */
+        @media (min-width: 768px) {
+            header {
+                padding: 15px 30px;
+            }
+
+            main {
+                padding: 40px 30px;
+            }
+
+            .filters-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .caregivers-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+
+            .caregiver-card {
+                padding: 25px;
+            }
+
+            .modal-caregiver-header {
+                flex-direction: row;
+                text-align: left;
+            }
+
+            .modal-actions {
+                flex-direction: row;
+            }
+
+            .open-menu, .close-menu {
+                display: none;
+            }
+        }
+
+        @media (min-width: 992px) {
+            header {
+                padding: 15px 50px;
+            }
+
+            main {
+                padding: 50px 50px;
+            }
+
+            .search-title {
+                font-size: 42px;
+            }
+
+            .filters-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .caregivers-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .caregivers-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* MOBILE MENU */
+        @media screen and (max-width: 767px) {
+            .open-menu, .close-menu {
+                display: block;
+                border: none;
+                background: none;
+                font-size: 16px;
+                cursor: pointer;
+                color: #3D44DD;
+                font-weight: bolder;
+                padding: 0px 12px;
+            }
+
+            .open-menu {
+                margin-left: auto;
+            }
+
+            .main-menu {
+                opacity: 0;
+                visibility: hidden;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1.5rem;
+                position: fixed;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                width: 80%;
+                max-width: 300px;
+                padding: 2rem;
+                background-color: rgba(255, 255, 255, 0.95);
+                box-shadow: -5px 0 10px rgba(227, 228, 228, 0.2);
+                transition: all 0.3s ease;
+                transform: translateX(100%);
+                backdrop-filter: blur(10px);
+                z-index: 1001;
+            }
+
+            .main-menu.visible {
+                opacity: 1;
+                visibility: visible;
+                transform: translateX(0);
+            }
+
+            .menu-list {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                gap: 0.5rem;
+            }
+
+            .menu-list li {
+                width: 100%;
+                text-align: center;
+            }
+
+            .menu-list li a {
+                display: block;
+                padding: 12px 0;
+                font-size: 16px;
+                width: 100%;
+            }
+
+            .user-profile {
+                margin-top: 20px;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .search-title {
+                font-size: 24px;
+            }
+
+            .modal-content {
+                padding: 20px;
+            }
+
+            .modal-caregiver-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .modal-actions {
+                flex-direction: column;
+            }
+        }

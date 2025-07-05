@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es-pe">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareMe | Users</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Zilla+Slab:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../assets/styles/styles.css">
+    <link rel="stylesheet" href="../assets/styles/dependent-persons.css">
+</head>
+<body>
+    <header>
+        <a href="../../index.html">
+            <p class="logo-text">CareMe</p>
+        </a>
+        <!-- boton de hamburguesa id = open -->
+        <button class="open-menu" id="open"><i class="bi bi-list"></i></button>
+        <nav class="main-menu" id="nav">
+            <button class="close-menu" id="close"><i class="bi bi-list"></i></button>
+            <ul class="menu-list">
+                <li><a href="caregivers.html">Cuidadores</a></li>
+                <li><a href="dependent-persons.html" class="active">Personas Dependientes</a></li>
+                <li><a href="../../index.html#contact-careme">Contáctanos</a></li>
+                <li><a href="../../index.html#nosotros">Nosotros</a></li> 
+                <li><a href="help.html">Ayuda</a></li>
+                <li><a href="login.html" class="login-btn" id="login">Inicia sesión</a></li>
+                <li><a href="login.html?form=register" class="register-btn" id="register">Regístrate</a></li>
+                <button class="accesibility-button">ES</button>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="dependent-hero">
+            <div class="dh-col1">
+                <h1>El cuidado que tu <span>ser querido</span> merece está a un clic de distancia</h1>
+                <p class="hero-description">
+                    Encuentra cuidadores profesionales verificados, con experiencia y 
+                    la calidez humana que tu familiar necesita. En CareMe, la tranquilidad 
+                    de tu familia es nuestra prioridad.
+                </p>
+                <div class="hero-buttons">
+                    <a href="login.html"><button class="hero-primary-btn">Encuentra tu cuidador ideal</button></a>
+                    <a href="#how-it-works" class="hero-secondary-btn">¿Cómo funciona? →</a>
+                </div>
+            </div>
+            <div class="dh-col2">
+                <img src="../assets/images/familia.jpg" alt="Cuidado profesional" class="dependent-hero-image">
+            </div>
+        </section>
+
+        <section class="why-use-section">
+            <div class="why-use-container">
+                <div class="why-use-header">
+                    <h2 class="why-use-title">¿Por qué <span>CareMe</span> es tu mejor opción?</h2>
+                    <p class="why-use-description">
+                        Sabemos que confiar el cuidado de tu ser querido no es fácil. 
+                        Por eso, hemos creado una plataforma que garantiza seguridad, 
+                        calidad y tranquilidad en cada servicio.
+                    </p>
+                </div>
+
+                <div class="why-use-grid">
+                    <div class="why-use-card">
+                        <img src="../assets/icons/verificado.png" alt="Cuidadores verificados" class="why-use-icon">
+                        <h3>100% Verificados</h3>
+                        <p>Todos nuestros cuidadores pasan por un riguroso proceso de verificación: antecedentes, formación profesional y referencias comprobadas.</p>
+                    </div>
+
+                    <div class="why-use-card">
+                        <img src="../assets/icons/seguimiento.png" alt="Seguimiento en tiempo real" class="why-use-icon">
+                        <h3>Seguimiento en Tiempo Real</h3>
+                        <p>Monitorea la ubicación del cuidador y recibe actualizaciones del servicio. Comparte el progreso con otros familiares para mayor tranquilidad.</p>
+                    </div>
+
+                    <div class="why-use-card">
+                        <img src="../assets/icons/emergencia.png" alt="Botón de emergencia" class="why-use-icon">
+                        <h3>Botón de Emergencia</h3>
+                        <p>Sistema de alerta inmediata que notifica a tus contactos de confianza y servicios de emergencia con solo presionar un botón.</p>
+                    </div>
+
+                    <div class="why-use-card">
+                        <img src="../assets/icons/precio.png" alt="Precios transparentes" class="why-use-icon">
+                        <h3>Precios Transparentes</h3>
+                        <p>Sin sorpresas ni costos ocultos. Conoce el precio exacto antes de confirmar el servicio y paga de forma segura por la app.</p>
+                    </div>
+
+                    <div class="why-use-card">
+                        <img src="../assets/icons/calidad-garantizada.png" alt="Calidad garantizada" class="why-use-icon">
+                        <h3>Calidad Garantizada</h3>
+                        <p>Solo trabajamos con profesionales titulados en carreras de salud. Revisa perfiles, calificaciones y reseñas de otros usuarios.</p>
+                    </div>
+
+                    <div class="why-use-card">
+                        <img src="../assets/icons/soporte-tecnico.png" alt="Soporte 24/7" class="why-use-icon">
+                        <h3>Soporte 24/7</h3>
+                        <p>Nuestro equipo está disponible las 24 horas para ayudarte con cualquier duda o situación que pueda presentarse.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-it-works" id="how-it-works">
+            <div class="how-it-works-header">
+                <h2 class="how-it-works-title">¿Cómo <span>funciona</span>?</h2>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Regístrate en minutos</h3>
+                        <p>Crea tu cuenta gratuita con tu correo o número de celular. Es rápido, fácil y seguro.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Busca cuidadores cerca de ti</h3>
+                        <p>Explora perfiles de cuidadores verificados en tu zona. Filtra por especialidad, experiencia, calificación y disponibilidad.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Selecciona y agenda</h3>
+                        <p>Elige al cuidador ideal para tu familiar. Programa el servicio por horas, días o de manera recurrente según tus necesidades.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Recibe cuidado de calidad</h3>
+                        <p>El cuidador llegará puntualmente. Monitorea el servicio en tiempo real y mantente conectado durante todo el proceso.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Califica y paga seguro</h3>
+                        <p>Al finalizar, califica el servicio y paga directamente por la app. Tu opinión ayuda a mantener la calidad de nuestra comunidad.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="choose-caregiver-section">
+            <div class="choose-caregiver-container">
+                <div class="choose-caregiver-header">
+                    <h2 class="choose-caregiver-title">Cómo elegir al cuidador adecuado</h2>
+                    <p class="choose-caregiver-subtitle">
+                        Sabemos que cada familia es única. Por eso te ayudamos a encontrar 
+                        al cuidador perfecto para las necesidades específicas de tu ser querido.
+                    </p>
+                </div>
+
+                <div class="caregiver-tips">
+                    <div class="tip-card">
+                        <h4>✓ Revisa la experiencia específica</h4>
+                        <p>Busca cuidadores con experiencia en la condición de tu familiar: adultos mayores, Alzheimer, diabetes, movilidad reducida, etc.</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <h4>✓ Lee las reseñas detalladamente</h4>
+                        <p>Las opiniones de otras familias te darán una idea clara del estilo de cuidado, puntualidad y profesionalismo del cuidador.</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <h4>✓ Verifica las certificaciones</h4>
+                        <p>Todos nuestros cuidadores tienen títulos verificados, pero algunos tienen especializaciones adicionales que pueden ser importantes para ti.</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <h4>✓ Considera la personalidad</h4>
+                        <p>En los perfiles encontrarás información sobre el carácter del cuidador. Elige alguien cuya personalidad sea compatible con tu familiar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="features-header">
+                <h2 class="features-title">Todo lo que necesitas en <span>una sola app</span></h2>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <img src="../assets/icons/cuidado-geolocalizado.png" alt="Ubicación en tiempo real" class="feature-icon">
+                    <div>
+                        <h3>Ubicación en tiempo real</h3>
+                        <p>Sigue el trayecto del cuidador desde que sale hasta que llega a tu hogar y durante todo el servicio.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <img src="../assets/icons/chat.png" alt="Chat directo" class="feature-icon">
+                    <div>
+                        <h3>Chat directo</h3>
+                        <p>Comunícate con el cuidador antes, durante y después del servicio para coordinar todos los detalles.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <img src="../assets/icons/historial.png" alt="Historial completo" class="feature-icon">
+                    <div>
+                        <h3>Historial completo</h3>
+                        <p>Accede al registro de todos los servicios, cuidadores anteriores y reportes de cada visita.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <img src="../assets/icons/pago-seguro.png" alt="Pagos seguros" class="feature-icon">
+                    <div>
+                        <h3>Pagos seguros</h3>
+                        <p>Paga con tarjeta, Yape o Plin directamente en la app. Sin efectivo, sin preocupaciones.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <img src="../assets/icons/cuidador.png" alt="Cuidadores favoritos" class="feature-icon">
+                    <div>
+                        <h3>Cuidadores favoritos</h3>
+                        <p>Guarda a tus cuidadores preferidos y solicítalos directamente para futuros servicios.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <img src="../assets/icons/notificacion.png" alt="Notificaciones inteligentes" class="feature-icon">
+                    <div>
+                        <h3>Notificaciones inteligentes</h3>
+                        <p>Recibe alertas sobre el inicio y fin del servicio, recordatorios y cualquier novedad importante.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="dependent-cta-section">
+            <div class="dependent-cta-content">
+                <h2>Dale a tu ser querido el <span>cuidado que merece</span></h2>
+                <p>
+                    Únete a miles de familias peruanas que ya confían en CareMe 
+                    para el cuidado profesional y humano de sus seres queridos
+                </p>
+                <a href="login.html?form=register"><button class="dependent-cta-btn">Registrarme ahora</button></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-support-text">
+                    <p>Contamos con el respaldo de entidades gubernamentales y organizaciones que apoyan nuestra visión de transformar el cuidado domiciliario en la región, conectando a cuidadores profesionales con familias que buscan atención de calidad y confianza.</p>
+                </div>
+                <div class="footer-partners">
+                    <img src="../assets/icons/gob.svg" alt="Gobierno del Perú" class="partner-logo" id="gobierno-peru">
+                    <img src="../assets/icons/fundacion-wiese.svg" alt="Fundación Wiese" class="partner-logo" id="fundacion-wiese">
+                    <img src="../assets/icons/cruz-roja.svg" alt="Cruz Roja Peruana" class="partner-logo">
+                    <img src="../assets/icons/bcp.svg" alt="BCP" class="partner-logo">
+                </div>
+            </div>
+
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <a href="../../index.html"><img src="../assets/icons/careme.svg" alt="CareMe Logo" class="footer-logo-icon"></a>
+                    </div>
+                    <div class="footer-app-links">
+                        <a href="https://play.google.com/store/apps" target="_blank"><img src="../assets/images/get-googleplay.png" alt="Google Play" class="app-download"></a>
+                        <a href="https://www.apple.com/app-store/" target="_blank"><img src="../assets/images/get-appstore.png" alt="App Store" class="app-download"></a>
+                    </div>
+                    <div class="footer-country">
+                        <span>Perú</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Cuidadores</h4>
+                        <ul>
+                            <li><a href="caregivers.html">Sé parte del cambio</a></li>
+                            <li><a href="caregivers.html">Requisitos para cuidadores</a></li>
+                            <li><a href="caregivers.html">Beneficios</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Personas dependientes</h4>
+                        <ul>
+                            <li><a href="#hero">Únete a la familia CareMe</a></li>
+                            <li><a href="../../index.html#testimonios">Testimonios</a></li>
+                            <li><a href="#choose-caregiver">Cómo elegir al cuidador adecuado</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Contáctanos</h4>
+                        <ul>
+                            <li><a href="../../index.html#contact-careme">Formulario de contacto</a></li>
+                            <li><a href="help.html">Atención al Cliente</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Nosotros</h4>
+                        <ul>
+                            <li><a href="../../index.html#nosotros">Sobre Nosotros</a></li>
+                            <li><a href="../../index.html#nosotros">Conoce nuestra marca</a></li>
+                            <li><a href="login.html">Únete al equipo</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Ayuda</h4>
+                        <ul>
+                            <li><a href="help.html">FAQ</a></li>
+                            <li><a href="help.html">Términos y condiciones</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+ <div class="footer-bottom">
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/" class="social-link" target="_blank" noreferrer>
+                        <img src="../assets/icons/facebook-icon.svg" alt="Facebook" class="social-icon">
+                    </a>
+                    <a href="https://x.com/home?lang=es" class="social-link" target="_blank" noreferrer>
+                        <img src="../assets/icons/twitter.svg" alt="Twitter" class="social-icon">
+                    </a>
+                    <a href="https://www.instagram.com/" class="social-link" target="_blank" noreferrer>
+                        <img src="../assets/icons/instagram.svg" alt="Instagram" class="social-icon">
+                    </a>
+                    <a href="https://www.tiktok.com/es/" class="social-link" target="_blank" noreferrer>
+                        <img src="../assets/icons/tiktok.svg" alt="TikTok" class="social-icon">
+                    </a>
+                    <a href="https://www.linkedin.com/" class="social-link" target="_blank" noreferrer>
+                        <img src="../assets/icons/linkedin.svg" alt="LinkedIn" class="social-icon">
+                    </a>
+                </div>
+                <div class="footer-copyright">
+                    <p>© 2025 CareMe Perú, S.L.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../assets/scripts/script.js"></script>
+</body>
+</html>
