@@ -454,6 +454,18 @@
             color: white;
         }
 
+        nav ul li a.logout-btn {
+            color: #dc3545;                   
+            border-top: 1px solid #e9ecef;    
+            margin-top: 10px;                 
+            padding-top: 15px;                
+        }
+
+        nav ul li a.logout-btn:hover {
+            color: white;                     
+            background-color: #dc3545;      
+        }
+
         /* RESPONSIVE */
         @media (min-width: 768px) {
             header {
