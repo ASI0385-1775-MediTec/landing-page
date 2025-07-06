@@ -352,6 +352,18 @@
             font-weight: 600;
         }
 
+        nav ul li a.logout-btn {
+            color: #dc3545;                    /* Color rojo */
+            border-top: 1px solid #e9ecef;    /* Línea separadora */
+            margin-top: 10px;                 /* Espacio superior */
+            padding-top: 15px;                /* Padding superior */
+        }
+
+        nav ul li a.logout-btn:hover {
+            color: white;                     /* Texto blanco en hover */
+            background-color: #dc3545;       /* Fondo rojo en hover */
+        }
+
         /* RESPONSIVE */
         @media (min-width: 768px) {
             header {
@@ -502,3 +514,5 @@
                 font-size: 24px;
             }
         }
+
+        
