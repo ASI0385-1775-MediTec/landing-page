@@ -543,7 +543,6 @@
             renderCaregivers(currentCaregivers);
         });
 
-        // Animación de entrada para las cards
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -558,7 +557,6 @@
             });
         }, observerOptions);
 
-        // Observar las cards cuando se crean
         const originalRender = renderCaregivers;
         renderCaregivers = function(caregiversToRender) {
             originalRender(caregiversToRender);
@@ -573,3 +571,14 @@
                 });
             }, 50);
         };
+
+        function logout() {
+            if (confirm('¿Estás seguro de que quieres cerrar sesión?')) {
+                localStorage.removeItem('careMe_userData');
+                localStorage.removeItem('careMe_nameChanged');
+                
+                alert('Sesión cerrada exitosamente. ¡Gracias por usar CareMe!');
+                
+                window.location.href = '../../index.html';
+            }
+        }
