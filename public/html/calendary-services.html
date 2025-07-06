@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es-pe">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareMe | Calendario de Servicios</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Zilla+Slab:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../assets/styles/calendary-services.css">
+</head>
+<body>
+    <header>
+        <a href="dashboard.html">
+            <p class="logo-text">CareMe</p>
+        </a>
+        <button class="open-menu" id="open"><i class="bi bi-list"></i></button>
+        <nav class="main-menu" id="nav">
+            <button class="close-menu" id="close"><i class="bi bi-list"></i></button>
+            <ul class="menu-list">
+                <li><a href="./dashboard.html">Home</a></li>
+                <li><a href="./find-caregivers.html">Buscar cuidadores</a></li>
+                <li><a href="./calendary-services.html" class="active">Calendario de Servicios</a></li>
+                <li><a href="./care-preferences.html">Preferencias de cuidado</a></li>
+                <li><a href="./my-payments.html">Mis Pagos</a></li>
+                <li><a href="support.html">Soporte</a></li>
+                <li><a href="my-profile.html">Mi perfil</a></li>
+                <li><a href="#" class="logout-btn" onclick="logout()">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1 class="page-title">Calendario de <span>Servicios</span></h1>
+            <p class="page-subtitle">
+                Consulta todos tus servicios programados para hoy y organiza tu día
+            </p>
+            <div class="current-date">
+                <i class="bi bi-calendar-check"></i>
+                Lunes, 07 de Julio 2025
+            </div>
+        </section>
+
+        <section class="summary-stats">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="bi bi-calendar-event"></i>
+                </div>
+                <div class="stat-value">2</div>
+                <div class="stat-label">Servicios Hoy</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="bi bi-clock"></i>
+                </div>
+                <div class="stat-value">6h</div>
+                <div class="stat-label">Horas Total</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="bi bi-person-heart"></i>
+                </div>
+                <div class="stat-value">2</div>
+                <div class="stat-label">Cuidadores</div>
+            </div>
+        </section>
+
+        <section class="services-container">
+            <div class="services-header">
+                <h2 class="services-title">Servicios de Hoy</h2>
+                <div class="services-count">2 servicios programados</div>
+            </div>
+
+            <div class="services-timeline">
+                <div class="timeline-line"></div>
+                
+                <!-- Servicio 1 -->
+                <div class="service-item">
+                    <div class="service-time-marker programado">
+                        08:00<br>12:00
+                    </div>
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-info">
+                                <h3>Cuidado Integral Matutino</h3>
+                                <div class="service-caregiver">
+                                    <i class="bi bi-person-circle"></i>
+                                    María Gonzales Rojas
+                                </div>
+                                <div class="service-duration">4 horas • 08:00 - 12:00</div>
+                            </div>
+                            <div class="service-status programado">Programado</div>
+                        </div>
+                        
+                        <div class="service-details">
+                            <div class="service-detail">
+                                <i class="bi bi-person-heart service-detail-icon"></i>
+                                <span>Paciente: Juanita Flores</span>
+                            </div>
+                            <div class="service-detail">
+                                <i class="bi bi-geo-alt service-detail-icon"></i>
+                                <span>Domicilio - San Miguel</span>
+                            </div>
+                            <div class="service-detail">
+                                <i class="bi bi-clipboard-heart service-detail-icon"></i>
+                                <span>Administración de medicamentos</span>
+                            </div>
+                            <div class="service-detail">
+                                <i class="bi bi-water service-detail-icon"></i>
+                                <span>Higiene personal</span>
+                            </div>
+                            <div class="service-detail">
+                                <i class="bi bi-chat-heart service-detail-icon"></i>
+                                <span>Compañía y supervisión</span>
+                            </div>
+                            <div class="service-detail">
+                                <i class="bi bi-telephone service-detail-icon"></i>
+                                <span>987-654-321</span>
+                            </div>
+                        </div>
+                        
+                        <div class="service-actions">
+                            <button class="action-btn btn-primary" onclick="contactCaregiver('María Gonzales')">
+                                <i class="bi bi-chat-dots"></i> Contactar
+                            </button>
+                            <button class="action-btn btn-secondary" onclick="viewDetails(1)">
+                                <i class="bi bi-eye"></i> Ver detalles
+                            </button>
+                            <button class="action-btn btn-secondary" onclick="reschedule(1)">
+                                <i class="bi bi-calendar-x"></i> Reprogramar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 2 -->
+                <div class="service-item">
+                    <div class="service-time-marker programado">
+                        14:00<br>16:00
+                    </div>
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-info">
+                                <h3>Sesión de Fisioterapia</h3>
+                                <div class="service-caregiver">
+                                    <i class="bi bi-person-circle"></i>
+                                    Carlos Mendoza Flores
+                                </div>
+                                <div class="service-duration">2 horas • 14:00 - 16:00</div>
+                            </div>
+                            <div class="service-status programado">Programado</div>
+                        </div>
+                        
+                        <div class="service-details">
+                            <div class="service-detail">
+                                <i class="bi bi-person-heart service-detail-icon"></i>
+                                <span>Paciente: Juanita Flores</span>
+                            </div>
+                            <div class="service-detail">
+                                <i class="bi bi-geo-alt service-detail-icon"></i>
+                                <span>Domicilio - San Miguel</span>
+                            </div>
+                            <div class="service-detail">
+                                <i class="bi bi-activity service-detail-icon"></i>
+                                <span>Ejercicios de rehabilitación</span>
+                            </div>
+                            <div class="service-detail">
+                                <i class="bi bi-heart-pulse service-detail-icon"></i>
+                                <span>Terapia física especializada</span>
+                            </div>
+                            <div class="service-detail">
+                                <i class="bi bi-clipboard-check service-detail-icon"></i>
+                                <span>Evaluación de progreso</span>
+                            </div>
+                            <div class="service-detail">
+                                <i class="bi bi-telephone service-detail-icon"></i>
+                                <span>956-789-123</span>
+                            </div>
+                        </div>
+                        
+                        <div class="service-actions">
+                            <button class="action-btn btn-primary" onclick="contactCaregiver('Carlos Mendoza')">
+                                <i class="bi bi-chat-dots"></i> Contactar
+                            </button>
+                            <button class="action-btn btn-secondary" onclick="viewDetails(2)">
+                                <i class="bi bi-eye"></i> Ver detalles
+                            </button>
+                            <button class="action-btn btn-secondary" onclick="reschedule(2)">
+                                <i class="bi bi-calendar-x"></i> Reprogramar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../assets/scripts/calendary-services.js"></script>
+</body>
+</html>

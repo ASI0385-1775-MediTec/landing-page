@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es-pe">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareMe | Soporte</title>
+    <link rel="icon" href="./public/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Zilla+Slab:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../assets/styles/support.css">
+</head>
+<body>
+    <header>
+        <a href="dashboard.html">
+            <p class="logo-text">CareMe</p>
+        </a>
+        <button class="open-menu" id="open"><i class="bi bi-list"></i></button>
+        <nav class="main-menu" id="nav">
+            <button class="close-menu" id="close"><i class="bi bi-list"></i></button>
+            <ul class="menu-list">
+                <li><a href="dashboard.html">Home</a></li>
+                <li><a href="find-caregivers.html">Buscar cuidadores</a></li>
+                <li><a href="./calendary-services.html">Calendario de servicios</a></li>
+                <li><a href="./care-preferences.html">Preferencias de cuidado</a></li>
+                <li><a href="my-payments.html">Mis Pagos</a></li>
+                <li><a href="support.html" class="active">Soporte</a></li>
+                <li><a href="my-profile.html">Mi perfil</a></li>
+                <li><a href="#" class="logout-btn" onclick="logout()">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1 class="page-title">Centro de <span>Soporte</span></h1>
+            <p class="page-subtitle">
+                Estamos aquí para ayudarte. Contacta con nuestro equipo o reporta cualquier incidente 
+                para resolver tus dudas y problemas rápidamente.
+            </p>
+            
+            <div class="support-info">
+                <i class="bi bi-headset support-icon"></i>
+                <div class="support-text">
+                    <div class="support-title">Soporte 24/7 Disponible</div>
+                    <div class="support-description">
+                        Nuestro equipo está disponible las 24 horas para brindarte la mejor atención
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Support Options (Default View) -->
+        <section class="support-options" id="support-options">
+            <div class="support-card" onclick="showContactForm()">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="bi bi-chat-dots"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Contactar Soporte</h3>
+                        <p>¿Tienes dudas generales, problemas técnicos o necesitas ayuda con la plataforma? Nuestro equipo te ayudará a resolverlo.</p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="urgency-indicator urgency-normal">Consulta General</div>
+                    <div class="response-time">Respuesta en 2-4 horas</div>
+                </div>
+            </div>
+
+            <div class="support-card" onclick="showIncidentForm()">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="bi bi-exclamation-triangle"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Reportar Incidente</h3>
+                        <p>¿Ocurrió un problema durante un servicio de cuidado? Reporta el incidente para que nuestro equipo lo revise y tome las medidas necesarias.</p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="urgency-indicator urgency-high">Alta Prioridad</div>
+                    <div class="response-time">Respuesta inmediata</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Support Form -->
+        <section class="form-container" id="contact-form">
+            <div class="form-header">
+                <div class="form-icon">
+                    <i class="bi bi-chat-dots"></i>
+                </div>
+                <h2 class="form-title">Contactar Soporte</h2>
+                <button class="back-btn" onclick="showSupportOptions()">
+                    <i class="bi bi-arrow-left"></i>
+                    Volver
+                </button>
+            </div>
+
+            <form id="support-contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label required" for="contact-name">Nombre completo</label>
+                        <input type="text" id="contact-name" class="form-input" value="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label required" for="contact-email">Correo electrónico</label>
+                        <input type="email" id="contact-email" class="form-input" value="johndoe@email.com" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label required" for="contact-category">Categoría del problema</label>
+                    <select id="contact-category" class="form-select" required>
+                        <option value="">Selecciona una categoría</option>
+                        <option value="tecnico">Problema técnico</option>
+                        <option value="cuenta">Problemas con mi cuenta</option>
+                        <option value="facturacion">Facturación y pagos</option>
+                        <option value="servicios">Servicios de cuidado</option>
+                        <option value="sugerencia">Sugerencia o mejora</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="contact-urgency">Nivel de urgencia</label>
+                    <div class="urgency-selector">
+                        <div class="urgency-option">
+                            <input type="radio" id="urgency-low" name="urgency" value="baja" checked>
+                            <label for="urgency-low">Baja</label>
+                        </div>
+                        <div class="urgency-option">
+                            <input type="radio" id="urgency-medium" name="urgency" value="media">
+                            <label for="urgency-medium">Media</label>
+                        </div>
+                        <div class="urgency-option">
+                            <input type="radio" id="urgency-high" name="urgency" value="alta">
+                            <label for="urgency-high">Alta</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label required" for="contact-subject">Asunto</label>
+                    <input type="text" id="contact-subject" class="form-input" placeholder="Describe brevemente tu consulta" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label required" for="contact-message">Descripción detallada</label>
+                    <textarea id="contact-message" class="form-textarea" rows="5" placeholder="Explica tu problema o consulta con el mayor detalle posible..." required></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="form-btn form-btn-secondary" onclick="showSupportOptions()">
+                        <i class="bi bi-arrow-left"></i>
+                        Cancelar
+                    </button>
+                    <button type="submit" class="form-btn form-btn-primary">
+                        <i class="bi bi-send"></i>
+                        Enviar consulta
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Incident Report Form -->
+        <section class="form-container" id="incident-form">
+            <div class="form-header">
+                <div class="form-icon">
+                    <i class="bi bi-exclamation-triangle"></i>
+                </div>
+                <h2 class="form-title">Reportar Incidente</h2>
+                <button class="back-btn" onclick="showSupportOptions()">
+                    <i class="bi bi-arrow-left"></i>
+                    Volver
+                </button>
+            </div>
+
+            <div class="incident-details">
+                <div class="incident-warning">
+                    <i class="bi bi-info-circle"></i>
+                    Información importante
+                </div>
+                <div class="incident-text">
+                    Los reportes de incidentes son tratados con alta prioridad. Nuestro equipo revisará 
+                    tu reporte inmediatamente y se contactará contigo para investigar la situación y 
+                    tomar las medidas apropiadas.
+                </div>
+            </div>
+
+            <form id="incident-report-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label required" for="incident-name">Tu nombre</label>
+                        <input type="text" id="incident-name" class="form-input" value="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label required" for="incident-phone">Teléfono de contacto</label>
+                        <input type="tel" id="incident-phone" class="form-input" placeholder="+51 999 999 999" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label required" for="incident-date">Fecha del incidente</label>
+                        <input type="date" id="incident-date" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label required" for="incident-time">Hora aproximada</label>
+                        <input type="time" id="incident-time" class="form-input" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label required" for="caregiver-name">Nombre del cuidador involucrado</label>
+                    <select id="caregiver-name" class="form-select" required>
+                        <option value="">Selecciona el cuidador</option>
+                        <option value="maria-gonzales">María Gonzales Rojas</option>
+                        <option value="carlos-mendoza">Carlos Mendoza Flores</option>
+                        <option value="ana-vargas">Ana Lucia Vargas</option>
+                        <option value="rosa-chavez">Rosa Elena Chávez</option>
+                        <option value="pedro-ramirez">Pedro Ramirez Silva</option>
+                        <option value="carmen-torres">Carmen Luz Torres</option>
+                        <option value="luis-morales">Luis Alberto Morales</option>
+                        <option value="otro">Otro cuidador</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label required" for="incident-type">Tipo de incidente</label>
+                    <select id="incident-type" class="form-select" required>
+                        <option value="">Selecciona el tipo de incidente</option>
+                        <option value="profesional">Falta de profesionalismo</option>
+                        <option value="puntualidad">Problemas de puntualidad</option>
+                        <option value="medicacion">Error en administración de medicamentos</option>
+                        <option value="maltrato">Maltrato o trato inadecuado</option>
+                        <option value="negligencia">Negligencia en el cuidado</option>
+                        <option value="robo">Robo o pérdida de objetos</option>
+                        <option value="incumplimiento">Incumplimiento de instrucciones</option>
+                        <option value="comunicacion">Problemas de comunicación</option>
+                        <option value="seguridad">Problemas de seguridad</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label required" for="incident-severity">Gravedad del incidente</label>
+                    <div class="urgency-selector">
+                        <div class="urgency-option">
+                            <input type="radio" id="severity-low" name="severity" value="leve">
+                            <label for="severity-low">Leve</label>
+                        </div>
+                        <div class="urgency-option">
+                            <input type="radio" id="severity-medium" name="severity" value="moderado">
+                            <label for="severity-medium">Moderado</label>
+                        </div>
+                        <div class="urgency-option high">
+                            <input type="radio" id="severity-high" name="severity" value="grave">
+                            <label for="severity-high">Grave</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label required" for="incident-description">Descripción detallada del incidente</label>
+                    <textarea id="incident-description" class="form-textarea" rows="6" placeholder="Describe exactamente qué sucedió, cuándo, dónde y cómo. Incluye todos los detalles relevantes que puedan ayudar en la investigación..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="incident-witnesses">Testigos presentes (opcional)</label>
+                    <input type="text" id="incident-witnesses" class="form-input" placeholder="Nombres de personas que presenciaron el incidente">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="incident-consequences">¿Hubo alguna consecuencia o daño?</label>
+                    <textarea id="incident-consequences" class="form-textarea" rows="3" placeholder="Describe si hubo algún daño físico, emocional, material, etc."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="incident-actions">¿Qué acciones se tomaron inmediatamente?</label>
+                    <textarea id="incident-actions" class="form-textarea" rows="3" placeholder="Describe qué medidas se tomaron después del incidente"></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="form-btn form-btn-secondary" onclick="showSupportOptions()">
+                        <i class="bi bi-arrow-left"></i>
+                        Cancelar
+                    </button>
+                    <button type="submit" class="form-btn form-btn-danger">
+                        <i class="bi bi-exclamation-triangle"></i>
+                        Reportar incidente
+                    </button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- Success Modal -->
+    <div class="success-modal" id="success-modal">
+        <div class="success-content">
+            <div class="success-icon">
+                <i class="bi bi-check-circle"></i>
+            </div>
+            <h2 class="success-title" id="success-title">¡Mensaje enviado exitosamente!</h2>
+            <p class="success-message" id="success-message">
+                Tu consulta ha sido recibida y será atendida por nuestro equipo de soporte.
+            </p>
+            <div class="ticket-info">
+                <div>Número de ticket:</div>
+                <div class="ticket-number" id="ticket-number">#CRM-2025-001234</div>
+            </div>
+            <button class="close-success-btn" onclick="closeSuccessModal()">
+                Continuar
+            </button>
+        </div>
+    </div>
+    <script src="../assets/scripts/support.js"></script>
+</body>
+</html>

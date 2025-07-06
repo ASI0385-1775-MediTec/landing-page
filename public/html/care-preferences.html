@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es-pe">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareMe | Preferencias de Cuidado</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Zilla+Slab:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../assets/styles/care-preferences.css">
+</head>
+<body>
+    <header>
+        <a href="dashboard.html">
+            <p class="logo-text">CareMe</p>
+        </a>
+        <button class="open-menu" id="open"><i class="bi bi-list"></i></button>
+        <nav class="main-menu" id="nav">
+            <button class="close-menu" id="close"><i class="bi bi-list"></i></button>
+            <ul class="menu-list">
+                <li><a href="./dashboard.html">Home</a></li>
+                <li><a href="./find-caregivers.html">Buscar cuidadores</a></li>
+                <li><a href="./calendary-services.html">Calendario de servicios</a></li>
+                <li><a href="./care-preferences.html" class="active">Preferencias de cuidado</a></li>
+                <li><a href="my-payments.html">Mis Pagos</a></li>
+                <li><a href="support.html">Soporte</a></li>
+                <li><a href="my-profile.html">Mi perfil</a></li>
+                <li><a href="#" class="logout-btn" onclick="logout()">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1 class="page-title">Preferencias de <span>Cuidado</span></h1>
+            <p class="page-subtitle">
+                Registra las preferencias específicas para que el cuidador sepa exactamente 
+                cómo tratar a tu ser querido y brindar la mejor atención personalizada
+            </p>
+        </section>
+
+        <!-- Success Message (hidden by default) -->
+        <div class="success-message" id="success-message">
+            <div class="success-icon">
+                <i class="bi bi-check-circle"></i>
+            </div>
+            <div class="success-text">
+                <div class="success-title" id="success-title">¡Preferencias guardadas!</div>
+                <div class="success-description" id="success-description">
+                    Tus preferencias han sido registradas exitosamente
+                </div>
+            </div>
+        </div>
+
+        <!-- Empty State (Escenario 1) -->
+        <section class="empty-state" id="empty-state">
+            <div class="empty-state-icon">
+                <i class="bi bi-heart-pulse"></i>
+            </div>
+            <h2 class="empty-state-title">No has registrado ninguna preferencia de cuidado</h2>
+            <p class="empty-state-description">
+                Las preferencias de cuidado ayudan al cuidador a conocer mejor las necesidades 
+                específicas de tu ser querido, garantizando una atención más personalizada y efectiva.
+            </p>
+            <button class="add-preferences-btn" onclick="openForm()">
+                <i class="bi bi-plus-circle"></i>
+                Agregar preferencias
+            </button>
+        </section>
+
+        <!-- Preferences Card (Escenario 2 - hidden by default) -->
+        <section class="preferences-card" id="preferences-card" style="display: none;">
+            <div class="preferences-header">
+                <div>
+                    <h2 class="preferences-title">Preferencias de Cuidado</h2>
+                    <p class="preferences-date" id="preferences-date">Última actualización: --</p>
+                </div>
+                <div class="preferences-actions">
+                    <button class="action-btn edit-btn" onclick="editPreferences()" title="Editar preferencias">
+                        <i class="bi bi-pencil"></i>
+                    </button>
+                    <button class="action-btn delete-btn" onclick="deletePreferences()" title="Eliminar preferencias">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="preferences-content" id="preferences-content">
+                <!-- Las preferencias se cargarán dinámicamente -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Form Modal -->
+    <div class="form-modal" id="form-modal">
+        <div class="form-content">
+            <div class="form-header">
+                <h2 class="form-title" id="form-title">Registrar Preferencias de Cuidado</h2>
+                <button class="form-close" onclick="closeForm()">
+                    <i class="bi bi-x"></i>
+                </button>
+            </div>
+
+            <form id="preferences-form">
+                <div class="form-group">
+                    <label class="form-label" for="patient-name">Nombre del paciente</label>
+                    <input type="text" id="patient-name" class="form-input" placeholder="Ej: Juanita Flores" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="medical-conditions">Condiciones médicas</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="diabetes" name="conditions" value="diabetes">
+                            <label for="diabetes">Diabetes</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="hipertension" name="conditions" value="hipertension">
+                            <label for="hipertension">Hipertensión</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="alzheimer" name="conditions" value="alzheimer">
+                            <label for="alzheimer">Alzheimer</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="movilidad-reducida" name="conditions" value="movilidad-reducida">
+                            <label for="movilidad-reducida">Movilidad reducida</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="cardiacos" name="conditions" value="cardiacos">
+                            <label for="cardiacos">Problemas cardíacos</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="respiratorios" name="conditions" value="respiratorios">
+                            <label for="respiratorios">Problemas respiratorios</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="medications">Medicamentos actuales</label>
+                    <textarea id="medications" class="form-textarea" placeholder="Lista los medicamentos que toma regularmente, dosis y horarios..." rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="allergies">Alergias y restricciones</label>
+                    <textarea id="allergies" class="form-textarea" placeholder="Alergias alimentarias, medicamentosas, restricciones dietéticas..." rows="2"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="mobility-level">Nivel de movilidad</label>
+                    <select id="mobility-level" class="form-select" required>
+                        <option value="">Seleccionar nivel de movilidad</option>
+                        <option value="independiente">Independiente</option>
+                        <option value="asistencia-minima">Necesita asistencia mínima</option>
+                        <option value="asistencia-moderada">Necesita asistencia moderada</option>
+                        <option value="asistencia-total">Necesita asistencia total</option>
+                        <option value="postrado">Postrado en cama</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="communication">Comunicación y comportamiento</label>
+                    <textarea id="communication" class="form-textarea" placeholder="¿Cómo se comunica? ¿Tiene dificultades de memoria? ¿Algún comportamiento específico que el cuidador debe conocer?" rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="daily-routine">Rutina diaria preferida</label>
+                    <textarea id="daily-routine" class="form-textarea" placeholder="Horarios de comida, actividades preferidas, horarios de descanso..." rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="emergency-contact">Contacto de emergencia</label>
+                    <input type="text" id="emergency-contact" class="form-input" placeholder="Nombre y teléfono del contacto de emergencia" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="special-instructions">Instrucciones especiales</label>
+                    <textarea id="special-instructions" class="form-textarea" placeholder="Cualquier instrucción adicional importante para el cuidador..." rows="3"></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="form-btn form-btn-secondary" onclick="closeForm()">Cancelar</button>
+                    <button type="submit" class="form-btn form-btn-primary" id="submit-btn">Guardar preferencias</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../assets/scripts/care-preferences.js"></script>
+</body>
+</html>

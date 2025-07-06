@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es-pe">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareMe | Buscar Cuidadores</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Zilla+Slab:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../assets/styles/find-caregivers.css">
+</head>
+<body>
+    <header>
+        <a href="dashboard.html">
+            <p class="logo-text">CareMe</p>
+        </a>
+        <button class="open-menu" id="open"><i class="bi bi-list"></i></button>
+        <nav class="main-menu" id="nav">
+            <button class="close-menu" id="close"><i class="bi bi-list"></i></button>
+            <ul class="menu-list">
+                <li><a href="dashboard.html">Home</a></li>
+                <li><a href="./find-caregivers.html" class="active">Buscar cuidadores</a></li>
+                <li><a href="./calendary-services.html  ">Calendario de servicios</a></li>
+                <li><a href="./care-preferences.html">Preferencias de cuidado</a></li>
+                <li><a href="my-payments.html">Mis Pagos</a></li>
+                <li><a href="support.html">Soporte</a></li>
+                <li><a href="my-profile.html">Mi perfil</a></li>
+                <li><a href="#" class="logout-btn" onclick="logout()">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="search-header">
+            <h1 class="search-title">Encuentra tu <span>cuidador ideal</span></h1>
+            <p class="search-subtitle">Cuidadores profesionales verificados cerca de ti en San Miguel</p>
+        </section>
+
+        <section class="filters-section">
+            <div class="filters-grid">
+                <div class="filter-group">
+                    <label class="filter-label">Especialidad</label>
+                    <select class="filter-select" id="specialty-filter">
+                        <option value="all">Todas las especialidades</option>
+                        <option value="adultos-mayores">Adultos mayores</option>
+                        <option value="discapacidad">Discapacidad</option>
+                        <option value="alzheimer">Alzheimer</option>
+                        <option value="diabetes">Diabetes</option>
+                        <option value="rehabilitacion">Rehabilitación</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label class="filter-label">Distancia</label>
+                    <select class="filter-select" id="distance-filter">
+                        <option value="all">Cualquier distancia</option>
+                        <option value="1km">Menos de 1 km</option>
+                        <option value="2km">Menos de 2 km</option>
+                        <option value="5km">Menos de 5 km</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label class="filter-label">Calificación</label>
+                    <select class="filter-select" id="rating-filter">
+                        <option value="all">Cualquier calificación</option>
+                        <option value="5">5 estrellas</option>
+                        <option value="4">4+ estrellas</option>
+                        <option value="3">3+ estrellas</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label class="filter-label">Experiencia</label>
+                    <select class="filter-select" id="experience-filter">
+                        <option value="all">Cualquier experiencia</option>
+                        <option value="1year">1+ años</option>
+                        <option value="3years">3+ años</option>
+                        <option value="5years">5+ años</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="caregivers-grid" id="caregivers-grid">
+            <!-- Los cuidadores los vamos a cargar dinámicamente -->
+        </section>
+    </main>
+
+    <!-- Modal para detalles del cuidador -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div></div>
+                <button class="modal-close" id="modal-close">
+                    <i class="bi bi-x"></i>
+                </button>
+            </div>
+            
+            <div class="modal-caregiver-header">
+                <img src="" alt="" class="modal-photo" id="modal-photo">
+                <div class="modal-caregiver-info">
+                    <h2 id="modal-name"></h2>
+                    <div class="modal-specialty" id="modal-specialty"></div>
+                    <div class="modal-rating">
+                        <div class="modal-stars" id="modal-stars"></div>
+                        <span class="modal-rating-text" id="modal-rating-text"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <h3 class="modal-section-title">
+                    <i class="bi bi-briefcase modal-section-icon"></i>
+                    Experiencia Profesional
+                </h3>
+                <div id="modal-experience"></div>
+            </div>
+
+            <div class="modal-section">
+                <h3 class="modal-section-title">
+                    <i class="bi bi-mortarboard modal-section-icon"></i>
+                    Formación Académica
+                </h3>
+                <div id="modal-education"></div>
+            </div>
+
+            <div class="modal-section">
+                <h3 class="modal-section-title">
+                    <i class="bi bi-list-check modal-section-icon"></i>
+                    Servicios Previos Destacados
+                </h3>
+                <div id="modal-services"></div>
+            </div>
+
+            <div class="modal-actions">
+                <button class="modal-btn modal-btn-secondary" id="modal-close-btn">Cerrar</button>
+                <button class="modal-btn modal-btn-primary" id="modal-contract">Contratar Cuidador</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/scripts/find-caregivers.js"></script>
+</body>
+</html>

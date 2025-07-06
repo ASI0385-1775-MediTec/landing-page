@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es-pe">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareMe | Métodos de Pago</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Zilla+Slab:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../assets/styles/my-payments.css">
+</head>
+<body>
+    <header>
+        <a href="dashboard.html">
+            <p class="logo-text">CareMe</p>
+        </a>
+        <button class="open-menu" id="open"><i class="bi bi-list"></i></button>
+        <nav class="main-menu" id="nav">
+            <button class="close-menu" id="close"><i class="bi bi-list"></i></button>
+            <ul class="menu-list">
+                <li><a href="dashboard.html">Home</a></li>
+                <li><a href="find-caregivers.html">Buscar cuidadores</a></li>
+                <li><a href="./calendary-services.html">Calendario de servicios</a></li>
+                <li><a href="./care-preferences.html">Preferencias de cuidado</a></li>
+                <li><a href="my-payments.html" class="active">Mis Pagos</a></li>
+                <li><a href="support.html">Soporte</a></li>
+                <li><a href="my-profile.html">Mi perfil</a></li>
+                <li><a href="#" class="logout-btn" onclick="logout()">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1 class="page-title">Métodos de <span>Pago</span></h1>
+            <p class="page-subtitle">
+                Gestiona tus métodos de pago y consulta el historial de transacciones realizadas
+            </p>
+        </section>
+
+        <!-- Success Message (hidden by default) -->
+        <div class="success-message" id="success-message">
+            <i class="bi bi-check-circle success-icon"></i>
+            <div class="success-text" id="success-text">Operación exitosa</div>
+        </div>
+
+        <div class="tab-navigation">
+            <button class="tab-btn active" data-tab="payment-history">
+                <i class="bi bi-clock-history"></i>
+                Historial de Pagos
+            </button>
+            <button class="tab-btn" data-tab="payment-methods">
+                <i class="bi bi-credit-card"></i>
+                Métodos de Pago
+            </button>
+        </div>
+
+        <!-- Payment History Tab -->
+        <div class="tab-content active" id="payment-history">
+            <div class="payments-grid" id="payments-grid">
+                <!-- Se generará dinámicamente -->
+            </div>
+        </div>
+
+        <!-- Payment Methods Tab -->
+        <div class="tab-content" id="payment-methods">
+            <div class="payment-methods-container">
+                <div class="default-payment-section">
+                    <h2 class="section-title">
+                        <i class="bi bi-star-fill section-icon"></i>
+                        Método de Pago Predeterminado
+                    </h2>
+                    <div class="no-default-card" id="no-default-card">
+                        <i class="bi bi-credit-card no-card-icon"></i>
+                        <div class="no-card-text">No tienes un método de pago predeterminado</div>
+                        <button class="add-card-btn" onclick="openAddCardForm()">
+                            <i class="bi bi-plus-circle"></i>
+                            Agregar tarjeta
+                        </button>
+                    </div>
+                    <div class="card-item default" id="default-card" style="display: none;">
+                        <!-- Se mostrará cuando haya una tarjeta predeterminada -->
+                    </div>
+                </div>
+
+                <div class="saved-cards-section">
+                    <h2 class="section-title">
+                        <i class="bi bi-wallet2 section-icon"></i>
+                        Tarjetas Guardadas
+                    </h2>
+                    <div class="saved-cards-grid" id="saved-cards-grid">
+                        <!-- Se generará dinámicamente -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Form Modal -->
+    <div class="form-modal" id="form-modal">
+        <div class="form-content">
+            <div class="form-header">
+                <h2 class="form-title" id="form-title">Agregar Método de Pago</h2>
+                <button class="form-close" onclick="closeForm()">
+                    <i class="bi bi-x"></i>
+                </button>
+            </div>
+
+            <form id="card-form">
+                <div class="form-group">
+                    <label class="form-label" for="card-number">Número de tarjeta</label>
+                    <input type="text" id="card-number" class="form-input" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="card-holder">Nombre del titular</label>
+                    <input type="text" id="card-holder" class="form-input" placeholder="JOHN DOE" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="expiry-date">Fecha de vencimiento</label>
+                        <input type="text" id="expiry-date" class="form-input" placeholder="MM/AA" maxlength="5" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="cvv">CVV</label>
+                        <input type="text" id="cvv" class="form-input" placeholder="123" maxlength="4" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="card-type">Tipo de tarjeta</label>
+                    <select id="card-type" class="form-select" required>
+                        <option value="">Seleccionar tipo</option>
+                        <option value="visa">Visa</option>
+                        <option value="mastercard">Mastercard</option>
+                        <option value="amex">American Express</option>
+                    </select>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="form-btn form-btn-secondary" onclick="closeForm()">Cancelar</button>
+                    <button type="submit" class="form-btn form-btn-primary" id="submit-btn">Guardar tarjeta</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../assets/scripts/my-payments.js"></script>
+</body>
+</html>
