@@ -75,3 +75,14 @@ document.querySelectorAll('.stat-card, .info-card, .action-card').forEach(card =
     card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(card);
 });
+
+function logout() {
+    if (confirm('¿Estás seguro de que quieres cerrar sesión?')) {
+        localStorage.removeItem('careMe_userData');
+        localStorage.removeItem('careMe_nameChanged');
+        
+        alert('Sesión cerrada exitosamente. ¡Gracias por usar CareMe!');
+        
+        window.location.href = '../../index.html';
+    }
+}
